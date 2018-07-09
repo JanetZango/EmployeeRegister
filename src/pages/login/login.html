@@ -1,0 +1,29 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Login</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="background">
+
+    <div class="back">
+            <ion-item>
+                    <ion-label stacked>Username</ion-label>
+                    <ion-input type="text" (change)="assignUsername($event)"></ion-input>
+                </ion-item>
+                
+                <ion-item>
+                    <ion-label stacked>Password</ion-label>
+                    <ion-input type="text" (change)="assignPassword($event)"></ion-input>
+                </ion-item>
+            
+    </div>
+  
+<div class="button">
+        <button ion-button block full color="light"(click)="signInUser()">Login</button>
+</div>
+
+</ion-content>

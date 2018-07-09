@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-list class="back">
+    <ion-item>
+      <ion-label>Username:</ion-label>
+      <ion-input type="text" stacked (change)="assignUsername($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password:</ion-label>
+      <ion-input type="text" stacked (change)="assignPassword($event)"></ion-input>
+    </ion-item>
+
+  </ion-list>
+<div class="button">
+    <button ion-button full block color="light" (click)="nextpage1()">Login</button>
+</div>
+  
+</ion-content>

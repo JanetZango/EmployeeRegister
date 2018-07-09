@@ -1,0 +1,54 @@
+
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>Employee Details</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="background">
+    <div class="back">
+
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>IdentificationNo:</ion-label><br>
+            <ion-input type="text"  #employeeID></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked> Name:</ion-label><br>
+            <ion-input type="text"  #employeeName></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Surname:</ion-label><br>
+            <ion-input type="text"  #employeeSurname></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Role:</ion-label>
+            <ion-input type="text" #employeeRole></ion-input>
+        </ion-item>
+    </ion-list>
+
+</div>
+<ion-list class="pic">
+        <input type="file" accept="image/png, image/jpeg" (change)="addImage($event)"> <br> 
+        <img *ngIf="url != '' " [src]="url" width="300" height="300"><br>
+  
+</ion-list>
+       
+    
+
+<div class="button">
+        <ion-list>
+                <button ion-button full block color="light" (click)="nextpage(); addEmp(employeeID.value,employeeName.value,employeeSurname.value,employeeRole.value)">Add Employee</button>
+            </ion-list>
+</div>
+
+    </ion-content>
+
+
+
