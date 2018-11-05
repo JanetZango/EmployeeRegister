@@ -1,0 +1,29 @@
+<body>
+  <div>
+    <br>
+    <br>
+    IdentificationNo:<br>
+    <input type="text" placeholder="id" #identification>
+    <br>
+    <br>
+    Name:<br>
+    <input type="text" placeholder="name" #name>
+    <br>
+    <br>
+    Surname:<br>
+    <input type="text" placeholder="surname" #surname>
+    <br>
+    <br>
+    Role:<br>
+    <input type="text" placeholder="role" #role>
+    <br>
+     <br>
+    <button type="submit" (click)="AddEmp(identification.value,name.value,surname.value,role.value)">Add</button>
+
+    <ul *ngFor="let Emp of EmpArr">
+      <li>{{Emp.identification}},{{Emp.name}},{{Emp.surname}},{{Emp.role}}
+
+      </li>
+    </ul>
+  </div>
+</body>
