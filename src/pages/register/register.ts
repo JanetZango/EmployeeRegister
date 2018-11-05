@@ -48,6 +48,8 @@ export class RegisterPage {
       alert("wrong data boss");
     }
   }
-
+ close(){
+   this.navCtrl.pop();
+ }
 
 }

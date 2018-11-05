@@ -30,9 +30,9 @@ export class EmployeeDetailsPage {
   employeeSurname: String;
   employeeRole: string;
 
-  addEmp(employeeID, employeeName, employeeSurname, employeeRole ,url) {
+  addEmp(employeeID, employeeName, employeeSurname, employeeRole, url) {
 
-    let emp = new Employee(employeeID, employeeName, employeeSurname, employeeRole ,url)
+    let emp = new Employee(employeeID, employeeName, employeeSurname, employeeRole, url)
     EmpArr.push(emp);
 
 
@@ -57,7 +57,7 @@ export class EmployeeDetailsPage {
             console.log('data deleted!');
           }
         },
-    
+
 
       ]
     });
@@ -101,24 +101,26 @@ export class EmployeeDetailsPage {
             let emprole = EmpArr[i].employeeRole;
             let url = EmpArr[i].url;
 
-            if (data.EmployeeID != "") {
-              let emp = new Employee(data.EmployeeID, empname, empsurname, emprole ,url)
+
+
+            if (data.EmployeeID != "" && data.EmployeeName != "" && data.EmployeeSurname != "" && data.EmployeeRole != "") {
+              let emp = new Employee(data.EmployeeID, data.EmployeeName, data.EmployeeSurname, data.EmployeeRole, url)
+              EmpArr[i] = emp;
+            }
+            else if (data.EmployeeID != "") {
+              let emp = new Employee(data.EmployeeID, empname, empsurname, emprole, url)
               EmpArr[i] = emp;
             }
             else if (data.EmployeeName != "") {
-              let emp = new Employee(empid, data.EmployeeName, empsurname, emprole ,url)
+              let emp = new Employee(empid, data.EmployeeName, empsurname, emprole, url)
               EmpArr[i] = emp;
             }
             else if (data.EmployeeSurname != "") {
-              let emp = new Employee(empid, empname, data.EmployeeSurname, emprole ,url)
+              let emp = new Employee(empid, empname, data.EmployeeSurname, emprole, url)
               EmpArr[i] = emp;
             }
             else if (data.EmployeeRole != "") {
-              let emp = new Employee(empid, empname, empsurname, data.EmployeeRole ,url)
-              EmpArr[i] = emp;
-            }
-            else if (data.EmployeeID != "" && data.EmployeeName != "" && data.EmployeeSurname != "" && data.EmployeeRole != "") {
-              let emp = new Employee(data.EmployeeID, data.EmployeeName, data.EmployeeSurname, data.EmployeeRole, url)
+              let emp = new Employee(empid, empname, empsurname, data.EmployeeRole, url)
               EmpArr[i] = emp;
             }
             console.log('profile updated')
@@ -136,7 +138,9 @@ export class EmployeeDetailsPage {
 
   }
 
-
+  nect() {
+    this.navCtrl.pop();
+  }
 
 
 }

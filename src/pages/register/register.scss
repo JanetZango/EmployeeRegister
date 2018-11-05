@@ -6,9 +6,8 @@ page-register {
     }
     
 .back{
-    opacity: 0.3;
+    opacity: 0.7;
     margin-top:100px;
-    border-radius: 100px;
     max-width: 70%;
     margin-left:60px;
 }
@@ -18,8 +17,13 @@ page-register {
     opacity: 0.7;
     margin-bottom: 100px;
     width:60%;
-   
-    
-
 }
+h1{
+    margin-top:30%;
+}
+.item{
+    color:black;
+    background-color:white;
+}
+
 }

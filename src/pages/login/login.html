@@ -1,29 +1,21 @@
-<ion-header>
-
-    <ion-navbar>
-        <ion-title>Login</ion-title>
-    </ion-navbar>
-
-</ion-header>
-
-
-<ion-content  class="background">
-
-    <div class="back">
-            <ion-item>
-                    <ion-label stacked>Username</ion-label>
-                    <ion-input type="text" (change)="assignUsername($event)"></ion-input>
-                </ion-item>
-                
-                <ion-item>
-                    <ion-label stacked>Password</ion-label>
-                    <ion-input type="text" (change)="assignPassword($event)"></ion-input>
-                </ion-item>
-            
+<ion-content class="background">
+    <div id="menu" align="center">
+        <h1 style="color:white">Login</h1>
     </div>
-  
-<div class="button">
-        <button ion-button block full color="light"(click)="signInUser()">Login</button>
-</div>
+    <div class="back">
+        <ion-item class="item">
+            <ion-label stacked>Username</ion-label>
+            <ion-input type="text" (change)="assignUsername($event)"></ion-input>
+        </ion-item>
+       <br>
+        <ion-item class="item">
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="text" (change)="assignPassword($event)"></ion-input>
+        </ion-item>
+    </div>
+    <br>
+    <div class="button">
+        <button ion-button block full color="light" (click)="signInUser()">Login</button>
+    </div>
 
 </ion-content>

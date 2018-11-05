@@ -1,23 +1,23 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>View Profile</ion-title>
-  </ion-navbar>
-</ion-header>
 
 <ion-content class="background">
+  <div id="menu" align="center">
+    <h1 style="color:white">Employee Details</h1>
+  </div>
   <div class="font">
-    <ion-card *ngFor="let emp of EmployeeArr; let i = index">
+    <ion-card class="card" *ngFor="let emp of EmployeeArr; let i = index">
+      <br>
       <div class="pic">
-        <ion-avatar><img [src]="emp.url" id="image"></ion-avatar>
+        <img [src]="emp.url" id="image">
       </div>
       <ion-card class="task">
         <div class="move">
-          Employee Id:{{emp.employeeID}}
-          <br> Full Name:{{emp.employeeName}}
-          <br> Surname:{{emp.employeeSurname}}
-          <br> Role:{{emp.employeeRole}}
-          <br>
-
+          <div class="padding">
+            Employee Id:{{emp.employeeID}}
+            <br> Full Name:{{emp.employeeName}}
+            <br> Surname:{{emp.employeeSurname}}
+            <br> Role:{{emp.employeeRole}}
+            <br>
+          </div>
           <button ion-button clear color="sky" round (click)="delEmp(i); delete()">
             <ion-icon name="build"></ion-icon>Delete Profile</button>
           <button ion-button clear color="sky" round (click)="updateEmp(i)">
@@ -26,4 +26,6 @@
       </ion-card>
     </ion-card>
   </div>
+  <br>
+  <button ion-button class="btn" color="light" class="move1" (click)="nect()">Go Back</button>
 </ion-content>

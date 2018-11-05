@@ -8,17 +8,18 @@ page-home {
 
     }
     .back{
-        opacity: 10;
+        opacity: 0.9;
         font-size: large;
-        margin-left:45px;
+        margin-left:5px;
         background-attachment: fixed;
         margin-top:80%;
-        max-width:500%;
-        
-       
-      
-        
-        
+        max-width:600%;
+          
+    }
+    .size{
+        opacity: 0.9;
+        width:90%;
+        margin-left:15px;
     }
 
 }
